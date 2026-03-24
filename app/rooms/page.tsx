@@ -1,3 +1,5 @@
+"use client";
+
 import RoomCard from "@/components/RoomCard";
 import { Room } from "@/types";
 
