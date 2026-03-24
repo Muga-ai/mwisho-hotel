@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
-// Featured rooms data
+export const dynamic = "force-dynamic";
+
 const rooms = [
   {
     id: "1",
@@ -25,7 +26,6 @@ const rooms = [
   },
 ];
 
-// Gallery images
 const galleryImages = [
   "mwisho-hotel/gallery/gallery1",
   "mwisho-hotel/gallery/gallery2",
@@ -52,6 +52,7 @@ export default function Home() {
           <p className="mb-6 text-lg md:text-xl text-white">
             Luxury stays, delicious meals, and unforgettable experiences in Siaya
           </p>
+
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/rooms"
@@ -59,10 +60,11 @@ export default function Home() {
             >
               View Rooms
             </Link>
+
             <a
               href="https://wa.me/254711378910?text=Hello!%20I%20want%20to%20book%20a%20room"
               target="_blank"
-              className="bg-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+              className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
             >
               Book via WhatsApp
             </a>
@@ -70,13 +72,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About */}
       <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">About Mwisho Mwisho Hotel</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          About Mwisho Mwisho Hotel
+        </h2>
+
         <p className="text-gray-700 mb-6">
-          Experience comfort and elegance in Siaya Town. Our hotel offers spacious rooms, 
-          a friendly atmosphere, delicious dining, and a perfect location for travelers and business guests.
+          Experience comfort and elegance in Siaya Town. Our hotel offers
+          spacious rooms, a friendly atmosphere, delicious dining, and a perfect
+          location for travelers and business guests.
         </p>
+
         <CldImage
           src="mwisho-hotel/gallery/gallery1"
           width={800}
@@ -86,11 +93,12 @@ export default function Home() {
         />
       </section>
 
-      {/* Featured Rooms */}
+      {/* Rooms */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           Our Rooms
         </h2>
+
         <div className="grid md:grid-cols-3 gap-6">
           {rooms.map((room) => (
             <div key={room.id} className="shadow-lg rounded-xl overflow-hidden">
@@ -101,9 +109,13 @@ export default function Home() {
                 alt={room.name}
                 className="w-full h-48 object-cover"
               />
+
               <div className="p-4">
                 <h3 className="text-lg font-bold">{room.name}</h3>
-                <p className="text-gray-600 mt-1">KES {room.price} per night</p>
+                <p className="text-gray-600 mt-1">
+                  KES {room.price} per night
+                </p>
+
                 <a
                   href="https://wa.me/254711378910?text=Hello!%20I%20want%20to%20book%20a%20room"
                   target="_blank"
@@ -119,7 +131,10 @@ export default function Home() {
 
       {/* Gallery */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Gallery</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Gallery
+        </h2>
+
         <div className="grid md:grid-cols-3 gap-6">
           {galleryImages.map((src, i) => (
             <CldImage
@@ -134,14 +149,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Google Map */}
+      {/* Map */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Visit Us</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          Visit Us
+        </h2>
+
         <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
           <iframe
             src="https://www.google.com/maps?q=Shop+20A+NextGen+Mall+Mombasa+Road+Siaya+Town&output=embed"
             className="w-full h-full border-0"
-            allowFullScreen
             loading="lazy"
           ></iframe>
         </div>
