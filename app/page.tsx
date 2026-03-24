@@ -10,26 +10,26 @@ const rooms = [
     id: "1",
     name: "Standard Room",
     price: 3000,
-    image: "mwisho-hotel/rooms/room1",
+    image: "bqwrewewqhmthfnq78b3",
   },
   {
     id: "2",
     name: "Deluxe Room",
     price: 5000,
-    image: "mwisho-hotel/rooms/room2",
+    image: "ggzfcxquf7tdwhnui5sf",
   },
   {
     id: "3",
     name: "Executive Suite",
     price: 8000,
-    image: "mwisho-hotel/rooms/room3",
+    image: "ailkosvzcjcfyssfwn4k",
   },
 ];
 
 const galleryImages = [
-  "mwisho-hotel/gallery/gallery1",
-  "mwisho-hotel/gallery/gallery2",
-  "mwisho-hotel/gallery/gallery3",
+  "ufegc4xnn5fwx5pcryd9",
+  "ws3qjl4d0iq3pfltkxyw",
+  "coh012hx68zfdnngshzr",
 ];
 
 export default function Home() {
@@ -38,17 +38,19 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-[90vh]">
         <CldImage
-          src="mwisho-hotel/hero/hotel-hero"
+          src="rtvj6ndfgo1rdxvxudb2"
           fill
           alt="Mwisho Mwisho Hotel"
           className="object-cover"
           priority
+          sizes="100vw"
         />
 
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Welcome to Mwisho Mwisho Hotel
           </h1>
+
           <p className="mb-6 text-lg md:text-xl text-white">
             Luxury stays, delicious meals, and unforgettable experiences in Siaya
           </p>
@@ -79,13 +81,11 @@ export default function Home() {
         </h2>
 
         <p className="text-gray-700 mb-6">
-          Experience comfort and elegance in Siaya Town. Our hotel offers
-          spacious rooms, a friendly atmosphere, delicious dining, and a perfect
-          location for travelers and business guests.
+          Experience comfort and elegance in Siaya Town.
         </p>
 
         <CldImage
-          src="mwisho-hotel/gallery/gallery1"
+          src="ufegc4xnn5fwx5pcryd9"
           width={800}
           height={500}
           alt="Hotel Interior"
